@@ -4,7 +4,6 @@ class MoveLocationInfoIntoEvent < ActiveRecord::Migration
     add_column :events, :lat, :float
     add_column :events, :lng, :float
     add_column :events, :location_description, :text
-    drop_table :locations
   end
 
   def self.down
