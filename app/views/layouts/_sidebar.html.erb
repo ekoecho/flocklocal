@@ -1,12 +1,14 @@
 <div id='additionalInfo' class='grid_4'>
 <a id="createBtn" href="/events/new" title="Create a new Event"><span>Create Event</span></a>
+<% unless @featured_event.nil? %>
 <div class="featured successStory">
 <img src="{event_owner_avatar_url}" alt="{event_owner_name}" />
-<h4>Event title</h4>
+<h4><%= @featured_event.title %></h4>
 
-    <p>{Event Excerpt}</p>
+<p><%= @featured_event.excerpt %></p>
     <a href="{event-url}/" alt="{Event Title}" />
 </div>
+<% end %>
 
 <!-- Sidebar (event) -->
 <div id="volunteer">
